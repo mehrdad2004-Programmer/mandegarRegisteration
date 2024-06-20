@@ -1,0 +1,48 @@
+/*----------- reset default styles -----------*/
+@font-face {
+  font-family: 'vazir';
+  src: url("statics/font/vazir.ttf");
+}
+
+*{
+  font-family: 'vazir' !important;
+}
+
+body {
+  font-family: vazir;
+  background: #f9f9f9;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-right: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#register-form-container .register-form-title {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+#register-form-container .register-form-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #444;
+  bottom: -1rem;
+  right: 0;
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ثبت نام</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgb(252, 203, 112);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+            border: 3px groove gold;
+            
+        }
+
+        h2 {
+            color: #292828;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333232;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:invalid {
+            border-color: rgb(255, 115, 0);
+            box-shadow: 0 0 5px rgb(255, 115, 0);
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .column div {
+            width: 48%;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #6b6969;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.8s ease, color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        input[type="file"] {
+            border: 2px solid #45a049;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        footer{
+            text-align: center;
+            background-color:dimgrey;
+            height: 90px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        header{
+            position: relative;
+            background-color: rgb(61, 61, 61);
+            height: 80px;
+            color: white;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards;
+
+        }
+       
+        input[type="text"]:focus{
+            background-color: rgb(238, 229, 98);
+        }
+        input:focus{
+            background-color: rgb(238, 229, 98);
+            border-color: #45a049;
+           box-shadow: 0 0 5px #45a049;
+        }
+        form {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgb(252, 203, 112);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+            border: 3px groove gold;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @media (max-width: 600px) {
+    
+            .container {
+                max-width: 100%;
+                margin: 20px;
+            }
+
+            .column div {
+                width: 100%;
+            }
+        }  
+    </style>
+</head>
+<body>
+            <header>
+                <span></span>
+            </header>
+    <div class="container">
+        <h2>فرم ثبت نام</h2>
+
+        <form action="#" method="post">
+
+            <div class="column">
+                <div>
+                    <label for="f_name">نام:</label>
+                    <input type="text" id="f_name" name="f_name" required>
+                </div>
+
+                <div>
+                    <label for="l_name">نام خانوادگی:</label>
+                    <input type="text" id="l_name" name="l_name" required>
+                </div>
+            </div>
+
+            <label for="father_name">نام پدر:</label>
+            <input type="text" id="father_name" name="father_name" required>
+
+            <label for="melli_code">کد ملی:</label>
+            <input type="text" id="melli_code" name="melli_code" required>
+
+            <label for="birth_date">تاریخ تولد:</label>
+            <input type="date" id="birth_date" name="birth_date" required>
+
+            <label for="birth_place">محل تولد:</label>
+            <input type="text" id="birth_place" name="birth_place" required>
+
+            <label for="shenaseh">محل صدور شناسنامه:</label>
+            <input type="text" id="shenaseh" name="shenaseh" required>
+
+            <label for="phone_number">شماره تماس:</label>
+            <input type="tel" id="phone_number" name="phone_number" required>
+
+            <div>
+                <div>
+                    <label for="home_number">شماره منزل:</label>
+                    <input type="text" id="home_number" name="home_number" required>
+                </div>
+
+                <div>
+                    <label for="home_address">آدرس منزل:</label>
+                    <input type="text" id="home_address" name="home_address" required>
+                </div>
+            </div>
+
+            <label for="image_upload">بارگذاری عکس:</label>
+            <input type="file" id="image_upload" name="image_upload" accept="image/*" required>
+
+            <hr>
+
+            <h2>اطلاعات والدین</h2>
+
+            <div class="column">
+                <div>
+                    <label for="father_f_name">نام پدر:</label>
+                    <input type="text" id="father_f_name" name="father_f_name" required>
+                </div>
+
+                <div>
+                    <label for="father_l_name">نام خانوادگی :</label>
+                    <input type="text" id="father_l_name" name="father_l_name" required>
+                </div>
+
+                <label for="shoghl">شغل :</label>
+                <input type="text" id="shoghl" name="shoghl" required>
+
+                <label for="father_phone">شماره تماس :</label>
+                <input type="tel" id="father_phone" name="father_phone" required>
+
+                <label for="father_melli_code">کد ملی :</label>
+                <input type="text" id="father_melli_code" name="father_melli_code" required>
+
+                <label for="education_level">تحصیلات :</label>
+                <input type="text" id="education_level" name="education_level" required>
+                
+                    <label for="work_address">آدرس محل کار :</label>
+                    <input type="text" id="work_address" name="work_address" required>
+                
+                <div>
+                    <label for="mother_f_name">نام مادر:</label>
+                    <input type="text" id="mother_f_name" name="mother_f_name" required>
+                </div>
+
+                <div>
+                    <label for="mother_l_name">نام خانوادگی :</label>
+                    <input type="text" id="mother_l_name" name="mother_l_name" required>
+                </div>
+
+                <label for="shoghl_m">شغل :</label>
+                <input type="text" id="shoghl_m" name="shoghl_m" required>
+
+                <label for="mother_phone">شماره تماس :</label>
+                <input type="tel" id="mother_phone" name="mother_phone" required>
+
+                <label for="mother_melli_code">کد ملی :</label>
+                <input type="number" id="mother_melli_code" name="mother_melli_code" required>
+
+                <label for="education_level">تحصیلات :</label>
+                <input type="text" id="education_level" name="education_level" required>
+                
+                    <label for="work_address">آدرس محل کار :</label>
+                    <input type="text" id="work_address" name="work_address" required>
+                
+            </div>
+
+            <hr>
+            <h2>مشخصات تحصیلی</h2>
+            <label for="school_last_year">آموزشگاه سال قبل:</label>
+            <input type="text" id="school_last_year" name="school_last_year" required>
+
+            <label for="last_year_score">معدل کل سال قبل:</label>
+            <input type="number" id="last_year_score" name="last_year_score" required>
+
+            <label for="enzebaat_last_year">انضباط سال گذشته:</label>
+            <input type="number" id="enzebaat_last_year" name="enzebaat_last_year" required>
+
+            <button type="submit">ثبت نام</button>
+
+        </form>
+    </div>
+        <footer>
+            تمامی حقوق مادی و معنوی این سایت به من چه<br>
+            
+        </footer>
+</body>
+</html>
